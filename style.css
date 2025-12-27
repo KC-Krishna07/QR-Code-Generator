@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+p{
+    color: #060202;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        120deg,
+        #667eea,
+        #764ba2,
+        #6a11cb,
+        #2575fc
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 35px;
+    width: 360px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #1e1e2f;
+}
+
+.container p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 18px;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #5a67d8);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 26, 116, 0.4);
+}
+
+#qrBox {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#downloadBtn {
+    display: none;
+    margin-top: 18px;
+    text-decoration: none;
+    color: #010207;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.shapes span {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 12s infinite ease-in-out;
+}
+
+.shapes span:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.shapes span:nth-child(2) {
+    bottom: 15%;
+    right: 25%;
+    width: 160px;
+    height: 160px;
+    animation-delay: 3s;
+}
+
+.shapes span:nth-child(3) {
+    top: 40%;
+    right: 10%;
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
